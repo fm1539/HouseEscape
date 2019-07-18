@@ -18,10 +18,12 @@ if start == "A":
             
             if attempts_1 == 1:
                 print('Sorry, you are trapped forever.')
+                break
             else:
                 print('Sorry ' + answer + " is not the correct answer.")
                 attempts_1 -= 1
                 print("You have " + str(attempts_1) + ' attempts left.')
             answer = input('What is your guess?\n')
+            
             
         
