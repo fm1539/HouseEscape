@@ -14,9 +14,14 @@ if start == "A":
         print('Penny is the right answer! you may move on!\n ')
         move_n_1 = input('Enter e to move to room 2\n')
     else:
-        while (answer!= 'Penny') and (attempts_1 != 0):
-            print('Sorry ' + answer + " is not the correct answer.")
-            attempts_1 -= 1
-            print("You have " + str(attempts_1 + ' attempts left.')
+        while (answer!= 'Penny') or (attempts_1 > 1):
+            
+            if attempts_1 == 1:
+                print('Sorry, you are trapped forever.')
+            else:
+                print('Sorry ' + answer + " is not the correct answer.")
+                attempts_1 -= 1
+                print("You have " + str(attempts_1) + ' attempts left.')
             answer = input('What is your guess?\n')
+            
         
